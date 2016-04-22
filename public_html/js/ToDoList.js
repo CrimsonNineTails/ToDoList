@@ -4,37 +4,39 @@ $(function (){
        VERSION = "v1";
        
    Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
+   
+   var dataStore = Backendless.Persistence.of(Tasks);
+   var task = new Tasks({title: "My First Item", content:"delete ASAP", author:"email@email.com"});
+   dataStore.save(task);
+   
+   //var wrapper = {
+     //  posts: postsCollection.data
+//   };
+  
+//    Handlebars.registerHelper('format', function (time) {
+//     return moment(time).format("dddd, MMMM Do YYYY") ;   
+//});
+   
+//   var postsCollection = Backendless.Persistence.of(Posts).find();
+//   var blogTemplate = Handlebars.compile(blogScript);
+//   var blogHTML = blogTemplate(wrapper);
+   
+//   $('.main-container').html(blogHTML);
+//     var blogScript = $("#today-template").html();
+//  var blogTemplate = Handlebars.compile(blogScript);
+//   var blogHTML = blogTemplate(wrapper);
+   
+//   $('.new').html(blogHTML);
+//});
 });
+function Tasks(args){
+    args = args || {};
+    this.title = args.title || "";
+    this.content = args.content || "";
+    this.author = args.author || "";
+}
 
-            $(function() {
-                $('#nav > div').hover(
-                function () {
-                    var $this = $(this);
-                    $this.find('img').stop().animate({
-                        'width'     :'199px',
-                        'height'    :'199px',
-                        'top'       :'-25px',
-                        'left'      :'-25px',
-                        'opacity'   :'1.0'
-                    },500,'easeOutBack',function(){
-                        $(this).parent().find('ul').fadeIn(700);
-                    });
 
-                    $this.find('a:first,h2').addClass('active');
-                },
-                function () {
-                    var $this = $(this);
-                    $this.find('ul').fadeOut(500);
-                    $this.find('img').stop().animate({
-                        'width'     :'52px',
-                        'height'    :'52px',
-                        'top'       :'0px',
-                        'left'      :'0px',
-                        'opacity'   :'0.1'
-                    },5000,'easeOutBack');
 
-                    $this.find('a:first,h2').removeClass('active');
-                }
-            );
-            });
+          
         
