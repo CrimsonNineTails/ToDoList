@@ -1,5 +1,9 @@
+.bordered{
+    border: white solid;
+}
+
 .todolistadd{
-    color:white;
+    color: white;
 }
 body {
     background-image: url("http://kingofwallpapers.com/wallpaper/2/wallpaper-195.jpg");
