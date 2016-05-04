@@ -45,7 +45,7 @@ $(function (){
     //store what i need in a variable
    // var myTasks = taskStorage.find( dataQuery );
    //if what I there show that post
-    
+   //online 
    
    
 Handlebars.registerHelper('format', function (time) {
