@@ -37,13 +37,13 @@ $(function (){
        posts: postsCollection.data
    };
    //connect to backendless
-    var taskStorage = Backendless.Persistence.of( Tasks);
+   /* var taskStorage = Backendless.Persistence.of( Tasks);
     //select what I need
     var dataQuery = {
          condition: "author = " + YOUR_ID_HERE
-    };
+    };*/
     //store what i need in a variable
-    var myTasks = taskStorage.find( dataQuery );
+   // var myTasks = taskStorage.find( dataQuery );
    //if what I there show that post
     
    

@@ -67,7 +67,7 @@
       <script id="blogs-template" type="text/x-handlebars-template">
           
          {{#each  posts}}
-         {{#if myTasks}} 
+         
         {{#if DoneorNot}}
             <div class="blog-post bordered hoverable red">
                     <h6><img src="images/task-done-outline.png" class="right done waves-effect" width="20" height="20" type="20" type="submit" name="action" data={{objectId}}>
@@ -85,7 +85,7 @@
                     <p class="blog-post-meta">At {{format created}}</p>
                     <div> {{{content}}} </div>
                 </div>
-        {{/if}}
+        
           {{/if}}
           {{/each}}
             
