@@ -24,28 +24,22 @@ $(function (){
         location.reload();
     });
    Backendless.initApp(APPLICATION_ID, SECRET_KEY, VERSION);
-   
+
+
    /*var dataStore = Backendless.Persistence.of(Tasks);
    var task = new Tasks({title: "My First Item", content:"delete ASAP", author:"email@email.com"});
    dataStore.save(task);
    */
-   var postsCollection = Backendless.Persistence.of(Tasks).find();
-   
   
-    console.log(postsCollection);
-   var wrapper = {
+
+    var dataQuery = {condition: "ownerId = '" + Backendless.LocalCache.get("current-user-id")+  "'"};
+    // "ownderID = '1u2e1y2ehdhdeliqwhdju2uo122'"
+    var postsCollection = Backendless.Persistence.of(Tasks).find(dataQuery);
+    
+   
+    var wrapper = {
        posts: postsCollection.data
    };
-   //connect to backendless
-   /* var taskStorage = Backendless.Persistence.of( Tasks);
-    //select what I need
-    var dataQuery = {
-         condition: "author = " + YOUR_ID_HERE
-    };*/
-    //store what i need in a variable
-   // var myTasks = taskStorage.find( dataQuery );
-   //if what I there show that post
-   //online 
    
    
 Handlebars.registerHelper('format', function (time) {
@@ -68,7 +62,7 @@ function Tasks(args){
     args = args || "";
     this.title = args.title || "";
     this.content = args.content || "";
-
+    this.authorEmail = args.authorEmail || "";
 }
 
 
