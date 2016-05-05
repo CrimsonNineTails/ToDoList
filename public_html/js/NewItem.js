@@ -1,4 +1,7 @@
-
+ $(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
 $(function () {
     
    var APPLICATION_ID =  "8B1C2399-1443-6254-FFB8-C4C280680100",

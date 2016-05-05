@@ -19,7 +19,22 @@
                     <ul class="right hide-on-med-and-down">
                     <li><a href="index.html"><i class="material-icons">refresh</i></a></li>   
                     </ul>
-                </div>
+                <!-- Modal Trigger -->
+                    <a class="modal-trigger waves-effect waves-light btn left" href="#modal1">For Public Use</a>
+
+                    <!-- Modal Structure -->
+                    <div id="modal1" class="modal modal-fixed-footer">
+                      <div class="modal-content">
+                        <h4 class="Title">Guest Login</h4>
+                        <p class="Title">for guest login use</p>
+                        <p class="Title">Email: Guest@Guest.com</p>
+                        <p class="Title">Password: password</p>
+                        <p class="Title">Keep in mind anything you post will be available to others </p>
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Got It</a>
+                      </div>
+                </div> 
             </nav>
                     
         </header>
@@ -89,19 +104,19 @@
           <button class="btn btn-large waves-light logout">Logout</button>
     </script>
     <script id="add-blog-template" type="text/x-handlebars-template">
-    <h2>Add a new Task</h2>
+    <h2 class="todolistadd">Add a new Task</h2>
     <div class="row">
         <form class="col s12 form-add-blog">
             <div class="row">
                 <div class="input-field col s12">
-                    <lable for="title">Task</lable>        
-                    <input id = "title" type="text" name="title">
+                    <lable class="todolistadd" for="title">Task</lable>        
+                    <input class="todolistadd" id = "title" type="text" name="title">
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <lable for="content">Task requirments</lable>
-                    <textarea id="content" name="content" class="materialize-textarea"></textarea>
+                    <lable class="todolistadd" for="content">Task requirments</lable>
+                    <textarea class="todolistadd" id="content" name="content" class="materialize-textarea"></textarea>
                 </div>
             </div>
             <div class="row">
